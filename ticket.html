@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hall Ticket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hall-ticket" id="hallTicket">
+    <h2 style="text-align:center;">College Hall Ticket</h2>
+    <hr>
+    <p><b>Roll No:</b> <span id="htRoll"></span></p>
+    <p><b>Name:</b> <span id="htName"></span></p>
+    <p><b>Course:</b> <span id="htCourse"></span></p>
+    <p><b>Year:</b> <span id="htYear"></span></p>
+    <hr>
+    <p><b>Exam Centre:</b> Main Block, Room No: 101</p>
+    <p><b>Instructions:</b></p>
+    <ul>
+      <li>Carry this hall ticket to the exam hall.</li>
+      <li>Be present 30 minutes before the exam starts.</li>
+      <li>Mobile phones and electronic devices are not allowed.</li>
+    </ul>
+  </div>
+
+  <button onclick="downloadHallTicket()">Download as PDF</button>
+  <button onclick="window.location.href='generate.html'">Back</button>
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="firebase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

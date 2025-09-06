@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Dashboard</h1>
+      <button id="signOutBtn">Sign Out</button>
+    </header>
+
+    <div class="card">
+      <h3>Create Exam</h3>
+      <input id="exam-subject" placeholder="Subject">
+      <input id="exam-date" type="date">
+      <input id="exam-time" placeholder="Time">
+      <input id="exam-hall" placeholder="Hall">
+      <button id="createExamBtn">Create Exam</button>
+    </div>
+
+    <div class="card">
+      <h3>Assign Exam Hall / Fee Update</h3>
+      <input id="student-roll" placeholder="Student Roll">
+      <input id="assign-hall-input" placeholder="Assign Hall">
+      <select id="fee-select">
+        <option value="paid">Paid</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button id="assignBtn">Update</button>
+    </div>
+
+    <div class="card">
+      <h3>Exams List</h3>
+      <div id="examsList"></div>
+    </div>
+  </div>
+
+  <!-- Firebase + Scripts -->
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
